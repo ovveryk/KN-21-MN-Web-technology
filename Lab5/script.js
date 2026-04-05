@@ -28,6 +28,10 @@ addBtnList.addEventListener("click", () => {
   console.log("Кнопка додавання була натиснута!");
   const newItem = document.createElement("li");
   newItem.textContent = prompt("Введіть текст для нового елемента списку:");
+  if (newItem.textContent.trim() === "") {
+    alert("Текст не може бути порожнім!");
+    return;
+  }
   listItems.appendChild(newItem);
 });
 
